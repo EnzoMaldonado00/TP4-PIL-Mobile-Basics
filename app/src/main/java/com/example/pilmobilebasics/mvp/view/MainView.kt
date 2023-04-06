@@ -41,6 +41,9 @@ class MainView(activity: Activity) : ActivityView(activity), MainContract.View {
 
     override fun resetInputText() {
         Toast.makeText(activity, R.string.reset_message, Toast.LENGTH_SHORT).show()
+    }
+
+    override fun clear() {
         binding.inputValue.text.clear()
     }
 }

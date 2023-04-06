@@ -8,6 +8,7 @@ class MainPresenter(private val model: MainContract.Model, private val view: Mai
         view.onIncButtonPressed { onIncButtonPressed() }
         view.onDecButtonPressed { onDecButtonPressed() }
         view.onResetButtonPressed { onResetButtonPressed() }
+        view.setNumber(model.result)
     }
 
     override fun onIncButtonPressed() {
@@ -31,6 +32,7 @@ class MainPresenter(private val model: MainContract.Model, private val view: Mai
 
     override fun onResetButtonPressed() {
         model.reset()
+        view.clear()
         view.resetInputText()
         view.setNumber(model.getNumber())
     }

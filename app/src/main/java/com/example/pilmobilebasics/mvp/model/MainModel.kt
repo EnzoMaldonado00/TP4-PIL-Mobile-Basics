@@ -1,11 +1,10 @@
 package com.example.pilmobilebasics.mvp.model
 
 import com.example.pilmobilebasics.mvp.contract.MainContract
-import com.example.pilmobilebasics.util.Constants.Companion.ZERO
 
 class MainModel : MainContract.Model {
 
-    private var result = ZERO
+    override var result = ZERO_LONG
 
     override fun incNumber(inputNumber: Long) {
         result += inputNumber
@@ -16,10 +15,14 @@ class MainModel : MainContract.Model {
     }
 
     override fun reset() {
-        result = ZERO
+        result = ZERO_LONG
     }
 
     override fun getNumber(): Long {
         return result
+    }
+
+    companion object {
+        private const val ZERO_LONG: Long = 0
     }
 }

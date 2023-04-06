@@ -4,7 +4,6 @@
     <string name="increase_button_text">Increase</string>
     <string name="decrease_button_text">Decrease</string>
     <string name="reset_button_text">Reset</string>
-    <string name="result_text">0</string>
     <string name="error_message">Error: No number entered.</string>
     <string name="reset_message">The counter has been reset!</string>
 </resources>
